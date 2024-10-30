@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
 <body>
-    
+    <div class="calc-container">
+        <div class="calc-display-container" id="calc-display-container">
+            <input id="display" readonly>
+        </div>
+        <div class="btn-container" id="btn-container">
+            <div class="digit-btn-container" id="digit-btn-container">
+                <button class="digit-zero" id="digit-zero">0</button>
+                <button class="digit-one" id="digit-one">1</button>
+                <button class="digit-two" id="digit-two">2</button>
+                <button class="digit-three" id="digit-three">3</button>
+                <button class="digit-four" id="digit-four">4</button>
+                <button class="digit-five" id="digit-five">5</button>
+                <button class="digit-six" id="digit-one">6</button>
+                <button class="digit-seven" id="digit-one">7</button>
+                <button class="digit-eight" id="digit-eight">8</button>
+                <button class="digit-nine" id="digit-nine">9</button>
+            </div>
+            <div class="operator-btn-container" id="operator-btn-container">
+                <button class="operator-add" id="add">+</button>
+                <button class="operator-substract" id="subtract">-</button>
+                <button class="operator-mutliply" id="multiply">x</button>
+                <button class="operator-divide" id="divide">÷</button>
+                <button class="operator-equals" id="equals">=</button>
+            </div>
+            <div class="clear-btn-container" id="clear-btn-container">
+                <button class="clear" id="clear">AC</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
