@@ -1,0 +1,97 @@
+body {
+    background-color: #1C1C1C;
+    opacity: 0.8;
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px; 
+}
+
+#display {
+    background-color: #1C1C1C; 
+    color: #FFFF;
+    font-weight: lighter;
+    font-size: 24px; 
+    font-family: sans-serif;
+    border: none;
+    text-align: right;
+    width: 100%; 
+    padding: 10px;
+}
+
+.btn-container {
+    display: flex; 
+    flex-direction: row;
+}
+
+.other-btn-container {
+    display: flex; 
+    flex-direction: row; 
+    margin-right: 10px; 
+}
+
+.digit-btn-container {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.digit-row {
+    display: flex; 
+}
+
+.operator-btn-container {
+    display: flex; 
+    flex-direction: row; 
+    margin-left: 10px; 
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 60px;  
+    height: 60px; 
+    font-size: 20px; 
+    margin: 5px; 
+    border: none; 
+    border-radius: 50%; 
+    color: #FFFF;
+    font-family: sans-serif;
+    font-weight: lighter;
+    cursor: pointer; 
+}
+
+#digit-zero {
+    flex: 1; 
+    margin-right: 5px; 
+    border-radius: 40px;
+}
+
+.decimal {
+    width: 60px;
+    margin-right: 18px; 
+}
+
+.digit-btn-container button {
+    background-color: #505050; 
+}
+
+.operator-btn-container button {
+    background-color: #FF9500; 
+}
+
+.other-btn-container button {
+    background-color: #808080; 
+}
