@@ -37,7 +37,7 @@ body {
 .other-btn-container {
     display: flex; 
     flex-direction: row; 
-    margin-right: 10px; 
+    margin: 0px; 
 }
 
 .digit-btn-container {
@@ -52,7 +52,6 @@ body {
 .operator-btn-container {
     display: flex; 
     flex-direction: row; 
-    margin-left: 10px; 
 }
 
 .second-container {
@@ -81,7 +80,7 @@ button {
 
 .decimal {
     width: 60px;
-    margin-right: 18px; 
+    margin-right: 10px; 
 }
 
 .digit-btn-container button {
