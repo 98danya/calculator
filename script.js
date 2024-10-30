@@ -3,23 +3,26 @@ const digitBtn =  document.querySelectorAll(".digit-btn-container button");
 const operatorBtn = document.querySelectorAll(".operator-btn-container button");
 const equalsBtn = document.getElementById("equals");
 const clearBtn = document.getElementById("clear");
+const decimalBtn = document.getElementById("decimal");
+const backspaceBtn = document.getElementById("backspace");
+const signBtn = document.getElementById("sign");
 
 
 function add(a, b) {
     return a + b;
-}
+};
 
 function substract(a, b) {
     return a - b;
-}
+};
 
 function multiply(a, b) {
     return a * b;
-}
+};
 
 function divide(a, b) {
     return a/b;
-}
+};
 
 function operate(num1, num2, operator) {
     if (operator === "add") {
@@ -33,7 +36,7 @@ function operate(num1, num2, operator) {
     } else {
         return "You didn't choose a valid operator or didn't type two numbers. Try again!"
     }
-}
+};
 
 let currentInput = "";
 let firstOperand = null;
@@ -47,12 +50,26 @@ function updateDisplay(digit) {
     }
     currentInput += digit;
     display.value = currentInput;
-}
+};
 
 digitBtn.forEach(button => {
     button.addEventListener("click", () => {
         updateDisplay(button.textContent);
     });
+});
+
+decimalBtn.addEventListener("click", () => {
+    if (!currentInput.includes(".")) {
+        if (operatorSelected) {
+            currentInput = "0.";
+            operatorSelected = false;
+        } else if (currentInput === "") {
+            currentInput = "0.";
+        } else {
+            currentInput += ".";
+        }
+        display.value = currentInput;
+    }
 });
 
 function selectOperator(op) {
@@ -67,8 +84,8 @@ function selectOperator(op) {
         }
         operator = op;
         operatorSelected = true;
-    }
-}
+    };
+};
 
 operatorBtn.forEach(button => {
     button.addEventListener("click", () => {
@@ -86,7 +103,7 @@ equalsBtn.addEventListener("click", () => {
         currentInput = result.toString();                    
         firstOperand = null;                                
         operator = null;                                     
-    }
+    };
 });
 
 clearBtn.addEventListener("click", () => {
@@ -94,4 +111,20 @@ clearBtn.addEventListener("click", () => {
     firstOperand = null;
     operator = null;
     display.value = "";
+});
+
+backspaceBtn.addEventListener('click', () => {
+    display.value = display.value.slice( 0, display.value.length - 1);
+});
+
+signBtn.addEventListener('click', () => {
+    if (currentInput !== "") {
+        if (currentInput.startsWith("-")) {
+            currentInput = currentInput.slice(1);
+        } else {
+            currentInput = "-" + currentInput;
+        }
+        display.value = currentInput;
+    }
+    
 });
